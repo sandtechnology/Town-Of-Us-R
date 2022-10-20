@@ -8,6 +8,7 @@ using System.Text.Json;
 using Reactor;
 using Reactor.Extensions;
 using UnityEngine;
+using UnhollowerBaseLib;
 
 namespace TownOfUs.Patches.CustomHats
 {
@@ -38,15 +39,25 @@ namespace TownOfUs.Patches.CustomHats
                 var hatJson = LoadJson();
                 var hatBehaviours = DiscoverHatBehaviours(hatJson);
 
-                DestroyableSingleton<HatManager>.Instance.allHats.ForEach(
-                    (Action<HatData>)(x => x.StoreName = "Vanilla")
-                );
+                var enumerator = DestroyableSingleton<HatManager>.Instance.allHats.GetEnumerator();
                 var originalCount = DestroyableSingleton<HatManager>.Instance.allHats.Count;
+                var referenceArray = new Il2CppReferenceArray<HatData>((long)originalCount + hatBehaviours.Count);
+                int index = 0;
+                while (enumerator.MoveNext())
+                {
+                    enumerator.Current.StoreName = "Vanilla";
+                    referenceArray[index] = enumerator.Current;
+                    index++;
+                }
+
+
                 for (var i = 0; i < hatBehaviours.Count; i++)
                 {
                     hatBehaviours[i].displayOrder = originalCount + i;
-                    HatManager.Instance.allHats.Add(hatBehaviours[i]);
+                    referenceArray[originalCount + i] = hatBehaviours[i];
                 }
+
+                DestroyableSingleton<HatManager>.Instance.allHats = referenceArray;
 
             }
             catch (Exception e)
