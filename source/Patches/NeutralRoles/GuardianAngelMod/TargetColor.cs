@@ -30,7 +30,7 @@ namespace TownOfUs.NeutralRoles.GuardianAngelMod
             if (PlayerControl.AllPlayerControls.Count <= 1) return;
             if (PlayerControl.LocalPlayer == null) return;
             if (PlayerControl.LocalPlayer.Data == null) return;
-            if (!PlayerControl.LocalPlayer.Is(RoleEnum.GuardianAngel)) return;
+            if (!PlayerControl.LocalPlayer.Is(RoleEnum.守护天使)) return;
             if (PlayerControl.LocalPlayer.Data.IsDead) return;
 
             var role = Role.GetRole<GuardianAngel>(PlayerControl.LocalPlayer);
@@ -65,7 +65,7 @@ namespace TownOfUs.NeutralRoles.GuardianAngelMod
                 var task = new GameObject("JesterTask").AddComponent<ImportantTextTask>();
                 task.transform.SetParent(player.transform, false);
                 task.Text =
-                    $"{jester.ColorString}Role: {jester.Name}\nYour target was killed. Now you get voted out!\nFake Tasks:";
+                    $"{jester.ColorString}Role: {jester.Name}\nYour target was killed. Now you get voted out!\n假任务:";
                 player.myTasks.Insert(0, task);
             }
             else if (CustomGameOptions.GaOnTargetDeath == BecomeOptions.Amnesiac)

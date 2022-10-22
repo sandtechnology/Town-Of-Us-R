@@ -8,7 +8,7 @@ namespace TownOfUs.ImpostorRoles.UndertakerMod
     {
         public static void Postfix(PlayerPhysics __instance)
         {
-            if (__instance.myPlayer.Is(RoleEnum.Undertaker))
+            if (__instance.myPlayer.Is(RoleEnum.ЫЭдсеп))
             {
                 var role = Role.GetRole<Undertaker>(__instance.myPlayer);
                 if (role.CurrentlyDragging != null)

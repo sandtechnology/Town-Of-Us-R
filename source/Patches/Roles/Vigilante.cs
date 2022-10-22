@@ -20,11 +20,11 @@ namespace TownOfUs.Roles
 
         public Vigilante(PlayerControl player) : base(player)
         {
-            Name = "Vigilante";
-            ImpostorText = () => "Kill Impostors If You Can Guess Their Roles";
-            TaskText = () => "Guess the roles of impostors mid-meeting to kill them!";
+            Name = "侠客";
+            ImpostorText = () => "生命就是一场豪赌";
+            TaskText = () => "在会议中猜测伪装者的职业来杀死他们!";
             Color = Patches.Colors.Vigilante;
-            RoleType = RoleEnum.Vigilante;
+            RoleType = RoleEnum.侠客;
             AddToRoleHistory(RoleType);
 
             RemainingKills = CustomGameOptions.VigilanteKills;

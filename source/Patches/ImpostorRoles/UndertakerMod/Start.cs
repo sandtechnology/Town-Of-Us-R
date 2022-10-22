@@ -9,7 +9,7 @@ namespace TownOfUs.ImpostorRoles.UndertakerMod
     {
         public static void Postfix(IntroCutscene._CoBegin_d__19 __instance)
         {
-            foreach (var role in Role.GetRoles(RoleEnum.Undertaker))
+            foreach (var role in Role.GetRoles(RoleEnum.ЫЭдсеп))
             {
                 var undertaker = (Undertaker) role;
                 undertaker.LastDragged = DateTime.UtcNow;

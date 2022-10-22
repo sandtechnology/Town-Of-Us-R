@@ -12,7 +12,7 @@ namespace TownOfUs.NeutralRoles.PlaguebearerMod
         {
             var localPlayer = PlayerControl.LocalPlayer;
             var _role = Role.GetRole(localPlayer);
-            if (_role?.RoleType != RoleEnum.Plaguebearer) return;
+            if (_role?.RoleType != RoleEnum.Œ¡“ﬂ÷Æ‘¥) return;
             if (localPlayer.Data.IsDead) return;
             var role = (Plaguebearer)_role;
             foreach (var state in __instance.playerStates)

@@ -12,7 +12,7 @@ namespace TownOfUs.NeutralRoles.PlaguebearerMod
         public static bool Prefix(KillButton __instance)
         {
             // if (!__instance.isActiveAndEnabled) return false;
-            var flag = PlayerControl.LocalPlayer.Is(RoleEnum.Plaguebearer);
+            var flag = PlayerControl.LocalPlayer.Is(RoleEnum.Œ¡“ﬂ÷Æ‘¥);
             if (!flag) return true;
             if (PlayerControl.LocalPlayer.Data.IsDead) return false;
             if (!PlayerControl.LocalPlayer.CanMove) return false;
@@ -35,7 +35,7 @@ namespace TownOfUs.NeutralRoles.PlaguebearerMod
                     writer3.Write(PlayerControl.LocalPlayer.PlayerId);
                     AmongUsClient.Instance.FinishRpcImmediately(writer3);
 
-                    System.Console.WriteLine(CustomGameOptions.ShieldBreaks + "- shield break");
+                    System.Console.WriteLine(CustomGameOptions.ShieldBreaks + "- ª§∂‹∆∆ÀÈ");
                     if (CustomGameOptions.ShieldBreaks)
                         role.LastInfected = DateTime.UtcNow;
                     StopKill.BreakShield(PlayerControl.LocalPlayer.GetMedic().Player.PlayerId, PlayerControl.LocalPlayer.PlayerId, CustomGameOptions.ShieldBreaks);

@@ -11,7 +11,7 @@ namespace TownOfUs.CrewmateRoles.TrackerMod
         public static void Postfix(Object obj)
         {
             if (ExileController.Instance == null || obj != ExileController.Instance.gameObject) return;
-            foreach (var role in Role.GetRoles(RoleEnum.Tracker))
+            foreach (var role in Role.GetRoles(RoleEnum.×·×ÙÕß))
             {
                 var tracker = (Tracker) role;
                 tracker.LastTracked = DateTime.UtcNow;

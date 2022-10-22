@@ -12,7 +12,7 @@ namespace TownOfUs.CrewmateRoles.AltruistMod
             if (PlayerControl.AllPlayerControls.Count <= 1) return;
             if (PlayerControl.LocalPlayer == null) return;
             if (PlayerControl.LocalPlayer.Data == null) return;
-            if (!PlayerControl.LocalPlayer.Is(RoleEnum.Altruist)) return;
+            if (!PlayerControl.LocalPlayer.Is(RoleEnum.Ñ³µÀÕß)) return;
 
             var role = Role.GetRole<Altruist>(PlayerControl.LocalPlayer);
 

@@ -10,7 +10,7 @@ namespace TownOfUs.NeutralRoles.WerewolfMod
         [HarmonyPriority(Priority.Last)]
         public static void Postfix(HudManager __instance)
         {
-            foreach (var role in Role.GetRoles(RoleEnum.Werewolf))
+            foreach (var role in Role.GetRoles(RoleEnum.‘¬œ¬¿«»À))
             {
                 var werewolf = (Werewolf) role;
                 if (werewolf.Rampaged)

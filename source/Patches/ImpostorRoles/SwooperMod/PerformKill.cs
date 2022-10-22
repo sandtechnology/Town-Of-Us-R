@@ -9,7 +9,7 @@ namespace TownOfUs.ImpostorRoles.SwooperMod
     {
         public static bool Prefix(KillButton __instance)
         {
-            var flag = PlayerControl.LocalPlayer.Is(RoleEnum.Swooper);
+            var flag = PlayerControl.LocalPlayer.Is(RoleEnum.“˛…Ì»À);
             if (!flag) return true;
             if (!PlayerControl.LocalPlayer.CanMove) return false;
             if (PlayerControl.LocalPlayer.Data.IsDead) return false;

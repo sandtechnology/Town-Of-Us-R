@@ -12,7 +12,7 @@ namespace TownOfUs.NeutralRoles.PlaguebearerMod
             if (reason != GameOverReason.HumansByVote && reason != GameOverReason.HumansByTask) return true;
 
             foreach (var role in Role.AllRoles)
-                if (role.RoleType == RoleEnum.Plaguebearer)
+                if (role.RoleType == RoleEnum.Œ¡“ﬂ÷Æ‘¥)
                     ((Plaguebearer)role).Loses();
 
             var writer = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId,

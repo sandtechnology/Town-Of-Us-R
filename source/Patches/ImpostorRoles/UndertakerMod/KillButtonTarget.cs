@@ -9,7 +9,7 @@ namespace TownOfUs.ImpostorRoles.UndertakerMod
     {
         public static bool Prefix(KillButton __instance)
         {
-            if (!PlayerControl.LocalPlayer.Is(RoleEnum.Undertaker)) return true;
+            if (!PlayerControl.LocalPlayer.Is(RoleEnum.ЫЭдсеп)) return true;
             return __instance == DestroyableSingleton<HudManager>.Instance.KillButton;
         }
 

@@ -26,9 +26,9 @@ namespace TownOfUs
 
                 foreach (var option in CustomOption.CustomOption.AllOptions)
                 {
-                    if (option.Name == "Crewmate Investigative Roles")
+                    if (option.Name == "船员 — 情报型")
                     {
-                        builder.Append("(Scroll for all settings)");
+                        builder.Append("(使用鼠标滚轮查看所有的设置)");
                         builder.AppendLine("");
                         builder.Append(new StringBuilder(__result));
                     }

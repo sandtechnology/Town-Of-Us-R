@@ -16,7 +16,7 @@ namespace TownOfUs.ImpostorRoles.GrenadierMod
             if (PlayerControl.AllPlayerControls.Count <= 1) return;
             if (PlayerControl.LocalPlayer == null) return;
             if (PlayerControl.LocalPlayer.Data == null) return;
-            if (!PlayerControl.LocalPlayer.Is(RoleEnum.Grenadier)) return;
+            if (!PlayerControl.LocalPlayer.Is(RoleEnum.ÖÀµ¯±ø)) return;
             var role = Role.GetRole<Grenadier>(PlayerControl.LocalPlayer);
             if (role.FlashButton == null)
             {

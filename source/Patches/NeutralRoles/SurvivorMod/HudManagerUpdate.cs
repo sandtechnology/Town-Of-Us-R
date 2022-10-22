@@ -17,7 +17,7 @@ namespace TownOfUs.NeutralRoles.SurvivorMod
             if (PlayerControl.AllPlayerControls.Count <= 1) return;
             if (PlayerControl.LocalPlayer == null) return;
             if (PlayerControl.LocalPlayer.Data == null) return;
-            if (!PlayerControl.LocalPlayer.Is(RoleEnum.Survivor)) return;
+            if (!PlayerControl.LocalPlayer.Is(RoleEnum.ÐÒ´æÕß)) return;
             var data = PlayerControl.LocalPlayer.Data;
             var isDead = data.IsDead;
             var vestButton = DestroyableSingleton<HudManager>.Instance.KillButton;

@@ -23,7 +23,7 @@ namespace TownOfUs.CrewmateRoles.InvestigatorMod
 
         public static void Postfix(PlayerControl __instance)
         {
-            if (!GameStarted || !PlayerControl.LocalPlayer.Is(RoleEnum.Investigator)) return;
+            if (!GameStarted || !PlayerControl.LocalPlayer.Is(RoleEnum.µ÷²éÔ±)) return;
             // New Footprint
             var investigator = Role.GetRole<Investigator>(PlayerControl.LocalPlayer);
             _time += Time.deltaTime;

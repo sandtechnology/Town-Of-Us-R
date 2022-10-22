@@ -9,13 +9,13 @@ namespace TownOfUs.CustomOption
 {
     public static class Patches
     {
-
         static string[] Menus = { "Game", "Crew", "Neutral", "Imposter", "Modifier" };
+        static string[] TextMenus = { "游戏", "船员阵营", "独立阵营", "伪装者阵营", "附加职业" };
 
         public static Export ExportButton;
         public static Import ImportButton;
         public static List<OptionBehaviour> DefaultOptions;
-        public static float LobbyTextRowHeight { get; set; } = 0.081F;
+        public static float LobbyTextRowHeight { get; set; } = 0.093F;
 
 
         private static List<OptionBehaviour> CreateOptions(GameOptionsMenu __instance, MultiMenu type)
@@ -165,7 +165,7 @@ namespace TownOfUs.CustomOption
                     if (title != null)
                     {
                         title.GetComponent<TextTranslatorTMP>().Destroy();
-                        title.GetComponent<TMPro.TextMeshPro>().m_text = $"Town Of Us {Menus[index]} Settings";
+                        title.GetComponent<TMPro.TextMeshPro>().m_text = $"我们的小镇 {TextMenus[index]} 设置";
                     }
                     var sliderInner = gameGroup?.FindChild("SliderInner");
                     if (sliderInner != null)
@@ -300,7 +300,7 @@ namespace TownOfUs.CustomOption
 
                 var i = 0;
                 foreach (var option in __instance.Children)
-                    option.transform.localPosition = new Vector3(x, y - i++ * 0.5f, z);
+                    if (option != null) option.transform.localPosition = new Vector3(x, y - i++ * 0.5f, z);
 
                 var commonTasks = __instance.Children.FirstOrDefault(x => x.name == "NumCommonTasks").TryCast<NumberOption>();
                 if (commonTasks != null) commonTasks.ValidRange = new FloatRange(0f, 4f);

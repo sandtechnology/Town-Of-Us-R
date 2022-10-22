@@ -8,7 +8,7 @@ namespace TownOfUs.NeutralRoles.GlitchMod
     {
         public static void Postfix(HudManager __instance)
         {
-            foreach (var role in Role.GetRoles(RoleEnum.Glitch))
+            foreach (var role in Role.GetRoles(RoleEnum.»ìãç))
             {
                 var glitch = (Glitch) role;
                 if (glitch.IsUsingMimic)

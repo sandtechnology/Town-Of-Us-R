@@ -9,7 +9,7 @@ namespace TownOfUs.CrewmateRoles.SheriffMod
     {
         public static void Postfix(IntroCutscene._CoBegin_d__19 __instance)
         {
-            foreach (var role in Role.GetRoles(RoleEnum.Sheriff))
+            foreach (var role in Role.GetRoles(RoleEnum.¾¯³¤))
             {
                 var sheriff = (Sheriff) role;
                 sheriff.LastKilled = DateTime.UtcNow;

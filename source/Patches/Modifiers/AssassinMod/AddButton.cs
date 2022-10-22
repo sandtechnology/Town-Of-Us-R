@@ -60,7 +60,7 @@ namespace TownOfUs.Modifiers.AssassinMod
             var nameText = Object.Instantiate(voteArea.NameText, voteArea.transform);
             voteArea.NameText.transform.localPosition = new Vector3(0.55f, 0.12f, -0.1f);
             nameText.transform.localPosition = new Vector3(0.55f, -0.12f, -0.1f);
-            nameText.text = "Guess";
+            nameText.text = "猜测";
 
             var cycleBack = Object.Instantiate(confirmButton, voteArea.transform);
             var cycleRendererBack = cycleBack.GetComponent<SpriteRenderer>();
@@ -109,7 +109,7 @@ namespace TownOfUs.Modifiers.AssassinMod
             guessCollider.offset = Vector2.zero;
             guess.transform.GetChild(0).gameObject.Destroy();
 
-            role.Guesses.Add(targetId, "None");
+            role.Guesses.Add(targetId, "无");
             role.Buttons[targetId] = (cycleBack, cycleForward, guess, nameText);
         }
 
@@ -119,7 +119,7 @@ namespace TownOfUs.Modifiers.AssassinMod
             {
                 if (MeetingHud.Instance.state == MeetingHud.VoteStates.Discussion) return;
                 var currentGuess = role.Guesses[voteArea.TargetPlayerId];
-                var guessIndex = currentGuess == "None"
+                var guessIndex = currentGuess == "无"
                     ? -1
                     : role.PossibleGuesses.IndexOf(currentGuess);
                 if (forwardsCycle)
@@ -135,8 +135,8 @@ namespace TownOfUs.Modifiers.AssassinMod
 
                 var newGuess = role.Guesses[voteArea.TargetPlayerId] = role.PossibleGuesses[guessIndex];
 
-                nameText.text = newGuess == "None"
-                    ? "Guess"
+                nameText.text = newGuess == "无"
+                    ? "猜测"
                     : $"<color=#{role.SortedColorMapping[newGuess].ToHtmlStringRGBA()}>{newGuess}</color>";
             }
 
@@ -153,7 +153,7 @@ namespace TownOfUs.Modifiers.AssassinMod
                 ) return;
                 var targetId = voteArea.TargetPlayerId;
                 var currentGuess = role.Guesses[targetId];
-                if (currentGuess == "None") return;
+                if (currentGuess == "无") return;
 
                 var playerRole = Role.GetRole(voteArea);
                 var playerModifier = Modifier.GetModifier(voteArea);
@@ -167,7 +167,7 @@ namespace TownOfUs.Modifiers.AssassinMod
                     if (playerModifier != null)
                         toDie = (playerRole.Name == currentGuess || playerModifier.Name == currentGuess) ? playerRole.Player : role.Player;
 
-                if (!toDie.Is(RoleEnum.Pestilence) || PlayerControl.LocalPlayer.Is(RoleEnum.Pestilence))
+                if (!toDie.Is(RoleEnum.万疫之神) || PlayerControl.LocalPlayer.Is(RoleEnum.万疫之神))
                 {
                     AssassinKill.RpcMurderPlayer(toDie);
                     role.RemainingKills--;
@@ -175,7 +175,7 @@ namespace TownOfUs.Modifiers.AssassinMod
                     if (toDie.IsLover() && CustomGameOptions.BothLoversDie)
                     {
                         var lover = ((Lover)playerModifier).OtherLover.Player;
-                        if (!lover.Is(RoleEnum.Pestilence)) ShowHideButtons.HideSingle(role, lover.PlayerId, false);
+                        if (!lover.Is(RoleEnum.万疫之神)) ShowHideButtons.HideSingle(role, lover.PlayerId, false);
                     }
                 }
             }

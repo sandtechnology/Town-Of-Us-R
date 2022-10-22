@@ -22,8 +22,8 @@ namespace TownOfUs.Roles.Modifiers
 
         public Assassin(PlayerControl player) : base(player)
         {
-            Name = "Assassin";
-            TaskText = () => "Guess the roles of the people and kill them mid-meeting";
+            Name = "刺客";
+            TaskText = () => "会议中可以猜测其它玩家职业来击杀他们";
             Color = Patches.Colors.Impostor;
             AbilityType = AbilityEnum.Assassin;
 
@@ -64,11 +64,11 @@ namespace TownOfUs.Roles.Modifiers
             }
             if (CustomGameOptions.AssassinGuessNeutralKilling)
             {
-                if (CustomGameOptions.ArsonistOn > 0 && !PlayerControl.LocalPlayer.Is(RoleEnum.Arsonist)) ColorMapping.Add("Arsonist", Colors.Arsonist);
-                if (CustomGameOptions.GlitchOn > 0 && !PlayerControl.LocalPlayer.Is(RoleEnum.Glitch)) ColorMapping.Add("The Glitch", Colors.Glitch);
-                if (CustomGameOptions.PlaguebearerOn > 0 && !PlayerControl.LocalPlayer.Is(RoleEnum.Plaguebearer)) ColorMapping.Add("Plaguebearer", Colors.Plaguebearer);
-                if (CustomGameOptions.WerewolfOn > 0 && !PlayerControl.LocalPlayer.Is(RoleEnum.Werewolf)) ColorMapping.Add("Werewolf", Colors.Werewolf);
-                if (!PlayerControl.LocalPlayer.Is(RoleEnum.Juggernaut)) ColorMapping.Add("Juggernaut", Colors.Juggernaut);
+                if (CustomGameOptions.ArsonistOn > 0 && !PlayerControl.LocalPlayer.Is(RoleEnum.纵火狂)) ColorMapping.Add("Arsonist", Colors.Arsonist);
+                if (CustomGameOptions.GlitchOn > 0 && !PlayerControl.LocalPlayer.Is(RoleEnum.混沌)) ColorMapping.Add("The Glitch", Colors.Glitch);
+                if (CustomGameOptions.PlaguebearerOn > 0 && !PlayerControl.LocalPlayer.Is(RoleEnum.瘟疫之源)) ColorMapping.Add("Plaguebearer", Colors.Plaguebearer);
+                if (CustomGameOptions.WerewolfOn > 0 && !PlayerControl.LocalPlayer.Is(RoleEnum.月下狼人)) ColorMapping.Add("Werewolf", Colors.Werewolf);
+                if (!PlayerControl.LocalPlayer.Is(RoleEnum.天启)) ColorMapping.Add("Juggernaut", Colors.Juggernaut);
             }
             if (CustomGameOptions.AssassinGuessImpostors && !PlayerControl.LocalPlayer.Is(Faction.Impostors))
             {

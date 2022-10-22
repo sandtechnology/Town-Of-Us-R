@@ -32,7 +32,7 @@ namespace TownOfUs
 
         public static void SetLights()
         {
-            if (PlayerControl.LocalPlayer.Is(RoleEnum.Crewmate))
+            if (PlayerControl.LocalPlayer.Is(RoleEnum.´¬Ô±))
             {
                 SetLights(Palette.CrewmateBlue);
                 return;

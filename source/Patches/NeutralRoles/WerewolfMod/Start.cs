@@ -9,7 +9,7 @@ namespace TownOfUs.NeutralRoles.WerewolfMod
     {
         public static void Postfix(IntroCutscene._CoBegin_d__19 __instance)
         {
-            foreach (var role in Role.GetRoles(RoleEnum.Werewolf))
+            foreach (var role in Role.GetRoles(RoleEnum.‘¬œ¬¿«»À))
             {
                 var werewolf = (Werewolf) role;
                 werewolf.LastRampaged = DateTime.UtcNow;

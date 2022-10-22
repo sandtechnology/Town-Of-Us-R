@@ -9,7 +9,7 @@ namespace TownOfUs.CrewmateRoles.SnitchMod
     {
         public static void Postfix(PlayerControl __instance)
         {
-            foreach (var role in Role.AllRoles.Where(x => x.RoleType == RoleEnum.Snitch))
+            foreach (var role in Role.AllRoles.Where(x => x.RoleType == RoleEnum.∏Ê√‹’ﬂ))
             {
                 var snitch = (Snitch)role;
                 if (PlayerControl.LocalPlayer.Data.IsDead || snitch.Player.Data.IsDead)

@@ -20,7 +20,7 @@ namespace TownOfUs.ImpostorRoles.TraitorMod
             var toChooseFrom = PlayerControl.AllPlayerControls.ToArray().Where(x => x.Is(Faction.Crewmates) && !x.Is(ModifierEnum.Lover) && !x.Data.IsDead && !x.Data.Disconnected).ToList();
             foreach (var player in toChooseFrom)
             {
-                foreach (var role in Role.GetRoles(RoleEnum.Executioner))
+                foreach (var role in Role.GetRoles(RoleEnum.–––Ã’ﬂ))
                 {
                     var exeRole = (Executioner)role;
                     if (player == exeRole.target) toChooseFrom.Remove(player);

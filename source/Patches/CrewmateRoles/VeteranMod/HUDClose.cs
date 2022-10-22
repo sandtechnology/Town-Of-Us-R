@@ -11,7 +11,7 @@ namespace TownOfUs.CrewmateRoles.VeteranMod
         public static void Postfix(Object obj)
         {
             if (ExileController.Instance == null || obj != ExileController.Instance.gameObject) return;
-            if (PlayerControl.LocalPlayer.Is(RoleEnum.Veteran))
+            if (PlayerControl.LocalPlayer.Is(RoleEnum.ÀÏ±ø))
             {
                 var role = Role.GetRole<Veteran>(PlayerControl.LocalPlayer);
                 role.LastAlerted = DateTime.UtcNow;

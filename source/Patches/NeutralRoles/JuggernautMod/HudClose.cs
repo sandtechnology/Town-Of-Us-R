@@ -11,7 +11,7 @@ namespace TownOfUs.NeutralRoles.JuggernautMod
         public static void Postfix(Object obj)
         {
             if (ExileController.Instance == null || obj != ExileController.Instance.gameObject) return;
-            foreach (var role in Role.GetRoles(RoleEnum.Juggernaut))
+            foreach (var role in Role.GetRoles(RoleEnum.ÃÏ∆Ù))
             {
                 var juggernaut = (Juggernaut)role;
                 juggernaut.LastKill = DateTime.UtcNow;

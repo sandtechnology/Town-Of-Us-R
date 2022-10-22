@@ -14,29 +14,29 @@ namespace TownOfUs.CrewmateRoles.DetectiveMod
         {
             if (br.KillAge > CustomGameOptions.DetectiveFactionDuration * 1000)
                 return
-                    $"Body Report: The corpse is too old to gain information from. (Killed {Math.Round(br.KillAge / 1000)}s ago)";
+                    $"侧写报告：这个尸体死亡太久，以至于没有任何有价值的线索了。（{Math.Round(br.KillAge / 1000)}秒前死亡）";
 
             if (br.Killer.PlayerId == br.Body.PlayerId)
                 return
-                    $"Body Report: The kill appears to have been a suicide! (Killed {Math.Round(br.KillAge / 1000)}s ago)";
+                    $"侧写报告：死者是自杀身亡的！（{Math.Round(br.KillAge / 1000)}前死亡）";
 
             var role = Role.GetRole(br.Killer);
 
             if (br.KillAge < CustomGameOptions.DetectiveRoleDuration * 1000)
                 return
-                    $"Body Report: The killer appears to be a {role.Name}! (Killed {Math.Round(br.KillAge / 1000)}s ago)";
+                    $"侧写报告：凶手的职业似乎是{role.Name}！（{Math.Round(br.KillAge / 1000)}前死亡）";
 
             if (br.Killer.Is(Faction.Crewmates))
                 return
-                    $"Body Report: The killer appears to be a Crewmate! (Killed {Math.Round(br.KillAge / 1000)}s ago)";
+                    $"侧写报告：凶手似乎属于船员阵营！（{Math.Round(br.KillAge / 1000)}前死亡）";
 
             else if (br.Killer.Is(Faction.Neutral))
                 return
-                    $"Body Report: The killer appears to be a Neutral Role! (Killed {Math.Round(br.KillAge / 1000)}s ago)";
+                    $"侧写报告：凶手似乎属于独立阵营！（{Math.Round(br.KillAge / 1000)}前死亡）";
 
             else
                 return
-                    $"Body Report: The killer appears to be an Impostor! (Killed {Math.Round(br.KillAge / 1000)}s ago)";
+                    $"侧写报告：凶手似乎属于伪装者阵营！（{Math.Round(br.KillAge / 1000)}前死亡）";
         }
     }
 }

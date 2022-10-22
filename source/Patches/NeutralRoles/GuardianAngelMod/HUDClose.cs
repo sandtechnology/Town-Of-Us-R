@@ -11,7 +11,7 @@ namespace TownOfUs.NeutralRoles.GuardianAngelMod
         public static void Postfix(Object obj)
         {
             if (ExileController.Instance == null || obj != ExileController.Instance.gameObject) return;
-            if (PlayerControl.LocalPlayer.Is(RoleEnum.GuardianAngel))
+            if (PlayerControl.LocalPlayer.Is(RoleEnum. ÿª§ÃÏ π))
             {
                 var role = Role.GetRole<GuardianAngel>(PlayerControl.LocalPlayer);
                 role.LastProtected = DateTime.UtcNow;

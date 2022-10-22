@@ -11,7 +11,7 @@ namespace TownOfUs.NeutralRoles.PhantomMod
     {
         public static void Postfix(HudManager __instance)
         {
-            foreach (var role in Role.GetRoles(RoleEnum.Phantom))
+            foreach (var role in Role.GetRoles(RoleEnum.ª√”∞))
             {
                 var phantom = (Phantom)role;
                 if (role.Player.Data.Disconnected) return;
