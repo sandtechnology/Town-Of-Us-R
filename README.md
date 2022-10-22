@@ -1,3 +1,6 @@
+## *此汉化版本基于4个憨逼汉化组进行修正和润色汉化，原下载地址为 https://amonguscn.club/%E6%88%91%E4%BB%AC%E7%9A%84%E5%B0%8F%E9%95%87v3-3-2%E6%B1%89%E5%8C%96/*
+## *This Chinese version is based on 4H-Team tranlastion, you can download the original one from (Chinese) https://amonguscn.club/%E6%88%91%E4%BB%AC%E7%9A%84%E5%B0%8F%E9%95%87v3-3-2%E6%B1%89%E5%8C%96/*
+
 ## *Note: This repository is an unofficial continuation of Town of Us due to the original repository being discontinued.*
 
 ![LOGO](./Images/TOU-logo.png)
